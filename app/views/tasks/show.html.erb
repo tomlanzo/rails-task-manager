@@ -1,0 +1,10 @@
+
+<h2><%= @task.id  %> - <%= @task.name %></h2>
+<p><%= @task.description %></p>
+<%= link_to "Toutes mes tâches", tasks_path %>
+<p></p>
+<%= link_to "Mettre à jour", edit_path(@task.id) %>
+<p></p>
+<%= link_to "Supprimer", task_path(@task.id),
+  method: :delete,
+  data: {confim: "Etes-vous sûr ?"} %>
